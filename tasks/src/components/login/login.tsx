@@ -8,9 +8,14 @@ import { Component, h, Host } from "@stencil/core";
 export class TaskLogin {
     render() {
         return <Host>
-            <h1> Hey There !</h1>
-            <input type="text"/>
-            <input type="password"/>
+            <div class="greeting">
+                <h1> Hey There !</h1>  
+                <h1>Sign In To Continue</h1>
+            </div>
+            
+            <my-input inputTitle="Username" inputType="text"></my-input>
+            <my-input inputTitle="Password" inputType="password"></my-input>
+            <button></button>
         </Host>
     }
 }

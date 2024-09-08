@@ -6,10 +6,20 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface MyInput {
+        "inputTitle": string;
+        "inputType": string;
+    }
     interface TaskLogin {
     }
 }
 declare global {
+    interface HTMLMyInputElement extends Components.MyInput, HTMLStencilElement {
+    }
+    var HTMLMyInputElement: {
+        prototype: HTMLMyInputElement;
+        new (): HTMLMyInputElement;
+    };
     interface HTMLTaskLoginElement extends Components.TaskLogin, HTMLStencilElement {
     }
     var HTMLTaskLoginElement: {
@@ -17,13 +27,19 @@ declare global {
         new (): HTMLTaskLoginElement;
     };
     interface HTMLElementTagNameMap {
+        "my-input": HTMLMyInputElement;
         "task-login": HTMLTaskLoginElement;
     }
 }
 declare namespace LocalJSX {
+    interface MyInput {
+        "inputTitle"?: string;
+        "inputType"?: string;
+    }
     interface TaskLogin {
     }
     interface IntrinsicElements {
+        "my-input": MyInput;
         "task-login": TaskLogin;
     }
 }
@@ -31,6 +47,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "my-input": LocalJSX.MyInput & JSXBase.HTMLAttributes<HTMLMyInputElement>;
             "task-login": LocalJSX.TaskLogin & JSXBase.HTMLAttributes<HTMLTaskLoginElement>;
         }
     }
