@@ -8,7 +8,7 @@ import { Component, h, Host } from "@stencil/core";
 export class TaskLogin {
     render() {
         return <Host>
-            <div class="greeting">
+            <div class="greeting abel-regular">
                 <h1> Hey There !</h1>  
                 <h1>Sign In To Continue</h1>
             </div>

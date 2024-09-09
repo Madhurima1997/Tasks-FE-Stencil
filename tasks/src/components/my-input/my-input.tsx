@@ -11,7 +11,7 @@ export class MyInput{
 
     render() {
         return <Host>
-            <div class="input-container">
+            <div class="input-container abel-regular">
                 {this.inputTitle && 
                     <label class="label">
                         {this.inputTitle}
