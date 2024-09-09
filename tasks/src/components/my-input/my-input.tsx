@@ -13,11 +13,13 @@ export class MyInput{
         return <Host>
             <div class="input-container abel-regular">
                 {this.inputTitle && 
-                    <label class="label">
-                        {this.inputTitle}
-                    </label>
+                    <div>
+                        <label class="label">
+                            {this.inputTitle}
+                        </label>
+                    </div>
                 }
-                <input type={this.inputType}/>
+                <input class="text" type={this.inputType}/>
             </div>
         </Host>
     }

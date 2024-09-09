@@ -1,0 +1,20 @@
+:host {
+    .abel-regular {
+        font-family: "Abel", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .text {
+        border: none;            /* Remove all borders */
+        border-bottom: 2px solid #333; /* Add underline with color */
+        outline: none;           /* Remove default focus outline */
+        padding: 8px;            /* Optional: Adjust padding as needed */
+        font-size: 16px;
+        margin-bottom: 5%;
+
+        &:focus {
+            border-bottom: 2px solid #007BFF;
+          }
+      }
+}
